@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
+    <title>JIST_v2.0</title>
+</head>
+<body>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo-section" class="nav-section">
+          <a href="#">
+            <i class="fa-solid fa-dumpster-fire"></i>
+          </a>
+        </div>
+        <div id="nav-mobile-section">
+          <div id="nav-link-section" class="nav-section">
+            <a href="#">ABOUT</a>
+            <a href="#">WORK</a>
+          </div>
+          <div id="nav-social-section" class="nav-section">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>    
+            <a href="#">
+              <i class="fa-brands fa-codepen"></i>
+            </a>
+          </div>
+          <div id="nav-contact-section" class="nav-section">
+            <a href="#">GET IN TOUCH</a>
+          </div>
+        </div>
+        <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+          <span>Menu</span>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+      
+      <main>
+        <article data-index="0" data-status="active">
+          <div class="article-image-section article-section"></div>
+          <div class="article-description-section article-section">
+            <p id="article_1_descriptionBox"></p>
+          </div>
+
+          <div class="article-title-section article-section">
+            <h2>Resources</h2>
+            <i class="fas fa-book"></i>
+          </div>
+
+          <div class="article-nav-section article-section">
+            <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+
+            <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+        <article data-index="1" data-status="inactive">    
+          <div class="article-image-section article-section"></div>
+          <div class="article-description-section article-section">
+            <p id="article_2_descriptionBox"></p>
+          </div>
+          <div class="article-title-section article-section">
+              <h2>Events</h2>
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="article-nav-section article-section">
+            <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+        <article data-index="2" data-status="inactive">    
+          <div class="article-image-section article-section"></div>
+          <div class="article-description-section article-section">
+            <p id="article_3_descriptionBox"></p>
+          </div>
+          <div class="article-title-section article-section">
+            <h2>Alumni</h2>
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="article-nav-section article-section">
+            <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+        <article data-index="3" data-status="inactive">    
+          <div class="article-image-section article-section"></div>
+          <div class="article-description-section article-section">
+            <p id="article_4_descriptionBox"></p>
+          </div>
+          <div class="article-title-section article-section">
+            <h2>Dating shating</h2>
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="article-nav-section article-section">
+            <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </article>
+      </main>
+      <script src="./script.js"></script>
+</body>
+</html>
