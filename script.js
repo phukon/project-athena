@@ -53,7 +53,7 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 };
 
 // Sanity
-let PROJECT_ID = "rw0nxmvo";
+let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 let QUERY = encodeURIComponent('*[_type == "descriptionBox"]');
 
