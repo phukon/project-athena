@@ -94,8 +94,8 @@ fetch(URL)
         //create a list element for each content
         let text = document.createElement('div');
         let title = document.createElement('div');
-        let articleImage = document.createElement("img");
-        
+        let articleImage = document.createElement('img');
+      
         if (descriptionBox.name == "article-1-descriptionBox") {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
@@ -107,7 +107,6 @@ fetch(URL)
         } else if (descriptionBox.name == 'article-2-descriptionBox') {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
-          articleImage.src = descriptionBox?.imageUrl;
 
           description2.appendChild(text);
           title2.appendChild(title);
