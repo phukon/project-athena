@@ -109,7 +109,7 @@
   main {
     flex-grow: 1;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
   }
   
   main > article {
@@ -118,14 +118,11 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
-    position: absolute;
-    left: 0px;
-    top: 0px;
     transition: transform 400ms ease;  
   }
   
   main > article[data-status="inactive"] {
-    transform: translateX(-100%);
+    transform: translateX(0%);
     transition: none;
   }
   
@@ -134,20 +131,20 @@
   }
   
   main > article[data-status="before"] {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   
   main > article[data-status="after"] {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   
   main > article[data-status="becoming-active-from-before"] {
-    transform: translateX(-100%);
+    transform: translateX(0%);
     transition: none;
   }
   
   main > article[data-status="becoming-active-from-after"] {
-    transform: translateX(100%);
+    transform: translateX(0%);
     transition: none;
   }
   
