@@ -52,10 +52,12 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
   nav.dataset.toggled = "false";
 };
 
-// Sanity
+/* From here, I used Sanity v3. Don't forget to add CORS origins dei!
+Sanity manage mari, API section goi pine, add CORS origins koribi.
+*/
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
-let QUERY = encodeURIComponent('*[_type == "descriptionBox"]');
+let QUERY = encodeURIComponent('*[_type == "descriptionBox"]{name, description, titleBox, "imageUrl": mainImage.asset->url}');
 
 // Compose the URL for your project's endpoint and add the query
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
@@ -67,6 +69,7 @@ fetch(URL)
     // get the list element, and the first item
     let description1 = document.querySelector("#article-1-descriptionBox");
     let title1 = document.querySelector('#article-title1');
+    let articleImage1 = document.getElementById('articleImage1');
 
     let description2 = document.querySelector("#article-2-descriptionBox");
     let title2 = document.querySelector('#article-title2');
@@ -78,6 +81,9 @@ fetch(URL)
     let title4 = document.querySelector('#article-title4');
     const loadingElements = document.getElementsByClassName("loading");
 
+    /* damn it took so much time on this one
+      done now. It's for removing the loading text. You can do it Riki!!
+    */
     if (result.length > 0) {
       for (let i = 0; i < loadingElements.length; i++) {
         loadingElements[i].style.display = "none";
@@ -85,20 +91,23 @@ fetch(URL)
     };
 
       result.forEach((descriptionBox) => {
-        // create a list element for each pet
+        //create a list element for each content
         let text = document.createElement('div');
         let title = document.createElement('div');
-
+        let articleImage = document.createElement("img");
         
         if (descriptionBox.name == "article-1-descriptionBox") {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
+          articleImage.src = descriptionBox?.imageUrl;
 
+          articleImage1.appendChild(articleImage);
           description1.appendChild(text);
           title1.appendChild(title);
         } else if (descriptionBox.name == 'article-2-descriptionBox') {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
+          articleImage.src = descriptionBox?.imageUrl;
 
           description2.appendChild(text);
           title2.appendChild(title);
