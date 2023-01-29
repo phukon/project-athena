@@ -9,6 +9,11 @@ export default {
             type: 'string'
         },
         {
+            name: 'titleBox',
+            title: 'TitleBox',
+            type: 'string'
+          },
+        {
             name: 'description',
             title: 'Description',
             type: 'text'
