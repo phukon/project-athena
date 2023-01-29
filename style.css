@@ -168,7 +168,7 @@
 
   /*main > article:first-child > .article-image-section {
     background-image: url("/assets/jist_building.png");
-  }*/
+  }
   
   main > article:nth-child(2) > .article-image-section {
     background-image: url("/assets/guest_hosue.jpg");
@@ -180,7 +180,7 @@
   
   main > article:nth-child(4) > .article-image-section {
     background-image: url("/assets/Jorbim_Boys_Hostel_1_during_diwali.jpg");
-  }
+  }*/
   
   main > article > .article-image-section {
     background-position: center;

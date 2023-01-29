@@ -70,6 +70,9 @@ fetch(URL)
     let description1 = document.querySelector("#article-1-descriptionBox");
     let title1 = document.querySelector('#article-title1');
     let articleImage1 = document.getElementById('articleImage1');
+    let articleImage2 = document.getElementById('articleImage2');
+    let articleImage3 = document.getElementById('articleImage3');
+    let articleImage4 = document.getElementById('articleImage4');
 
     let description2 = document.querySelector("#article-2-descriptionBox");
     let title2 = document.querySelector('#article-title2');
@@ -107,19 +110,25 @@ fetch(URL)
         } else if (descriptionBox.name == 'article-2-descriptionBox') {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
+          articleImage.src = descriptionBox?.imageUrl;
 
+          articleImage2.appendChild(articleImage);
           description2.appendChild(text);
           title2.appendChild(title);
         } else if (descriptionBox.name == 'article-3-descriptionBox') {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
+          articleImage.src = descriptionBox?.imageUrl;
 
+          articleImage3.appendChild(articleImage);
           description3.appendChild(text);
           title3.appendChild(title);
         } else {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
+          articleImage.src = descriptionBox?.imageUrl;
 
+          articleImage4.appendChild(articleImage);
           description4.appendChild(text);
           title4.appendChild(title);
         }
