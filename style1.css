@@ -120,6 +120,7 @@
     grid-template-rows: 2fr 1fr;
     transition: transform 400ms ease;  
   }
+
   
   main > article[data-status="inactive"] {
     transform: translateX(0%);
@@ -164,12 +165,12 @@
   }
 
   main > article:first-child > .article-image-section {
-    background-image: url("/assets/jist_building.png");
+    background-image: url("/assets/Jorbim_Boys_Hostel_1_during_diwali.jpg");
   }
   
-  main > article:nth-child(2) > .article-image-section {
+  /* main > article:nth-child(2) > .article-image-section {
     background-image: url("/assets/guest_hosue.jpg");
-  }
+  } */
   
   main > article:nth-child(3) > .article-image-section {
     background-image: url("/assets/jist_highway.png");
@@ -194,6 +195,14 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 4rem; 
+  }
+
+  main > article > .content {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 4rem; 
+    padding-right: 4rem;
+    padding-bottom: 2rem;
   }
   
   main > article > .article-description-section > p {
@@ -371,11 +380,16 @@
     main > article > .article-title-section {
       padding: 2rem;
     }
+
+    main > article > .content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     
     main > article > .article-title-section > h2 {
       flex-basis: 70%;
       font-size: 1.75em; 
-      line-height: 1.5rem;
+      line-height: 2.5rem;
     }
     
     main > article > .article-title-section > i {
