@@ -1,6 +1,6 @@
 export default {
-    title: 'Manuscript',
-    name: 'manuscript',
+    title: 'PDFs',
+    name: 'pdfs',
     type: 'document',
     fields: [
     {
