@@ -103,7 +103,7 @@ switch(true) {
   case currentUrl.includes("http://127.0.0.1:5500/etc-8.html"):
     query_etc8();
     break;
-  case currentUrl.includes("http://127.0.0.1:5500/etc-7.html"):
+  case currentUrl.includes("https://phukon.github.io/project-athena/etc-7.html"):
     query_etc7();
     break;
   case currentUrl.includes("http://127.0.0.1:5500/etc-6.html"):
