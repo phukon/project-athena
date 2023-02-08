@@ -29,20 +29,20 @@ function navigate() {
 }
 
 // sanity
-let PROJECT_ID = "jbb9mv51";
-let DATASET = "production";
+// let PROJECT_ID = "jbb9mv51";
+// let DATASET = "production";
 
-let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, file, description, "pdfUrl": file.asset->url}');
-let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+// let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, file, description, "pdfUrl": file.asset->url}');
+// let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
-fetch(URL)
-  .then((res) => res.json())
-  .then(({ result }) => {
+// fetch(URL)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
 
-    let description1 = document.querySelector("#placeholder");
-    let link = document.createElement('a');
+//     let description1 = document.querySelector("#placeholder");
+//     let link = document.createElement('a');
 
-    link.textContent = 'AFCAT';
-    link.href= result[0].pdfUrl;
-    description1.appendChild(link)
-  }).catch((err) => console.error(err));
+//     link.textContent = 'AFCAT';
+//     link.href= result[0].pdfUrl;
+//     description1.appendChild(link)
+//   }).catch((err) => console.error(err));
