@@ -14,6 +14,20 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
   nav.dataset.toggled = "false";
 };
 
+// forms
+function navigate() {
+  var branch = document.getElementById("branch").value;
+  var semester = document.getElementById("semester").value;
+
+  if (branch === "etc" && semester === "1") {
+    window.location.href = "#";
+  } else if (branch === "mech" && semester === "1") {
+    window.location.href = "#";
+  } else {
+    alert("Invalid selection. Please try again.");
+  }
+}
+
 // sanity
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="resources.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap" rel="stylesheet">
-    <title>ABOUT</title>
+    <title>RESOURCES</title>
 </head>
 <body>
   <nav data-toggled="false" data-transitionable="false">
@@ -22,7 +22,7 @@
       </div>
       <div id="nav-mobile-section">
         <div id="nav-link-section" class="nav-section">
-          <a href="#">ABOUT</a>
+          <a href="./about.html">ABOUT</a>
           <a href="#">WORK</a>
         </div>
         <div id="nav-social-section" class="nav-section">
@@ -33,7 +33,7 @@
             <i class="fa-brands fa-youtube"></i>
           </a>    
           <a href="#">
-            <i class="fa-brands fa-codepen"></i>
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
         <div id="nav-contact-section" class="nav-section">
@@ -73,67 +73,28 @@
       <article data-index="1" data-status="inactive">    
         <div class=" content" id="articleImage2">
 
-            <p> Enter details
-                <select>
+            <p> Enter details <p>&nbsp;</p>
+                <select id="branch">
                     <option disabled selected>Branch</option>
-                    <option value="Option 1">ETC</option>
-                    <option value="Option 2">Mech</option>
-                    <option value="Option 3">Civil</option>
-                    <option value="Option 4">PEI</option>
+                    <option value="etc">ETC</option>
+                    <option value="mech">Mech</option>
+                    <option value="civil">Civil</option>
+                    <option value="pei">PEI</option>
                   </select>
-                  <select>
+                  <select id="semester">
                     <option disabled selected>Semester</option>
-                    <option value="Option 1">1</option>
-                    <option value="Option 2">2</option>
-                    <option value="Option 3">3</option>
-                    <option value="Option 4">4</option>
-                    <option value="Option 4">5</option>
-                    <option value="Option 4">6</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
                   </select>
+                  <button class="form-button" type="button" onclick="navigate()">
+                    Let's go!!<i class="fas fa-rocket"></i>
+                  </button>
             </p>
             <p>&nbsp;</p>
-          <p><span style="font-size:22px">Project Athena: A Guide to the Academic Resource Archive</span></p>
-
-          <p><strong>Introduction: </strong>Project Athena is an initiative aimed at making a vast collection of academic resources readily available to the students of JIST. The project aims to provide students with a centralized platform for accessing educational resources and contributing their own resources to the archive.</p>
-     
-          <p>&nbsp;</p>
-          
-          <p><strong>Accessing Resources: </strong>To access the resources on Project Athena, students can simply log into the platform using their JIST credentials. They will have access to a wide range of materials including books, papers, and other study materials. The platform also allows for searching and filtering resources based on specific criteria such as subject, author, and date.</p>
-          
-          <p>&nbsp;</p>
-          
-          <p><strong>Contributing Resources:</strong> Project Athena is a collaborative platform, and students are encouraged to upload their own resources to the archive. To upload a resource, students will need to log into the platform and select the option to &quot;Upload a Resource&quot;. They will then need to fill out a short form with information about the resource, including its title, author, and subject.</p>
-          
-          <p>&nbsp;</p>
-          
-          <p><strong>Hardware Implementation:</strong> Project Athena is currently in the process of setting up hardware infrastructure to support the platform. This includes installing servers at the JIST campus and ensuring that the hardware is secure and reliable.</p>
-          
-          <p>&nbsp;</p>
-          
-          <p><strong>Tally of Library Resources: </strong>The Project Athena team is also working on updating the tally of resources available at the JIST library. This will ensure that students have access to a comprehensive list of all the resources available on campus.</p>
-          
-          <p>&nbsp;</p>
-          
-          <p><strong>Digitization of Papers: </strong>In the future, Project Athena may also include digitization of paper-based resources, making them more accessible and easier to use for students.</p>
-          
-          <p>&nbsp;</p>
-          
-          <p>Project Athena is an exciting initiative aimed at enhancing the academic experience of JIST students. With its centralized platform for accessing and sharing resources, students will have greater access to the information and materials they need to succeed in their studies.</p>
-          
-
-
-        </div>
-        <div class="article-description-section article-section">
-          <p><u><span style="font-size:22px">Tasks:</span></u></p> <p>&nbsp;</p>
-          <p>ReactJS and Tailwind css implementation</p>
-          <p>&nbsp;</p>
-          <p>Rich text fields</p>
-          <p>&nbsp;</p>
-          <p>Using environment variables</p>
-          <p>&nbsp;</p>
-          <p>Meta tags and social link previews</p>
-
-        </div>
         <div id="placeholder">
           <p>yoyooooooo</p>
         </div>
