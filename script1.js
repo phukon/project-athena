@@ -19,13 +19,16 @@ function navigate() {
   var branch = document.getElementById("branch").value;
   var semester = document.getElementById("semester").value;
 
-  if (branch === "etc" && semester === "1") {
-    window.location.href = "#";
-  } else if (branch === "mech" && semester === "1") {
-    window.location.href = "#";
-  } else {
-    alert("Invalid selection. Please try again.");
-  }
+  const baseUrl = `https://phukon.github.io/project-athena/${branch}-${semester}.html`;
+  window.location = baseUrl;
+
+  // if (branch === "etc" && semester === "1") {
+  //   window.location.href = "#";
+  // } else if (branch === "mech" && semester === "1") {
+  //   window.location.href = "#";
+  // } else {
+  //   alert("Invalid selection. Please try again.");
+  // }
 }
 
 // sanity
