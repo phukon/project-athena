@@ -35,7 +35,8 @@ let DATASET = "production";
 let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, file, description, "pdfUrl": file.asset->url}');
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
-fetch(URL)
+function query1() {
+  fetch(URL)
   .then((res) => res.json())
   .then(({ result }) => {
 
@@ -53,3 +54,6 @@ fetch(URL)
       })
     }
   }).catch((err) => console.error(err));
+}
+
+query1();
