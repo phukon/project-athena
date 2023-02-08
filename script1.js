@@ -35,10 +35,10 @@ function navigate() {
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
-let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, file, description, "pdfUrl": file.asset->url}');
+let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, type, file, description, "pdfUrl": file.asset->url}');
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
-function query1() {
+function queryetc7() {
   fetch(URL)
   .then((res) => res.json())
   .then(({ result }) => {
@@ -50,17 +50,29 @@ function query1() {
       // remove the placeholder content
       list.removeChild(firstListItem);
       result.forEach((fuck) => { // at this point, I'm fuming!
-        let link = document.createElement('a');
-        let linkItem = document.createElement("li");
 
-        link.textContent = fuck.name;
-        link.href= fuck.pdfUrl;
-
-        linkItem.appendChild(link)
-        list.appendChild(linkItem)
+        if(fuck.type == "etc-7") {
+          let link = document.createElement('a');
+          let linkItem = document.createElement("li");
+  
+          link.textContent = fuck.name;
+          link.href= fuck.pdfUrl;
+  
+          linkItem.appendChild(link)
+          list.appendChild(linkItem)
+        }
       })
     }
   }).catch((err) => console.error(err));
 }
 
-query1();
+// please review if you buy domain names!!
+const currentUrl = window.location.href;
+
+if (currentUrl.includes("http://127.0.0.1:5500/etc-7.html")) {
+  queryetc7();
+} else if (currentUrl.includes("page2.html")) {
+  // run queries specific to page2.html
+} else if (currentUrl.includes("page3.html")) {
+  // run queries specific to page3.html
+}
