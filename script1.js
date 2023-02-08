@@ -41,16 +41,20 @@ function query1() {
   .then(({ result }) => {
 
     let list = document.querySelector("ul");
-    let link = document.createElement('a');
     let firstListItem = document.querySelector("ul li");
 
     if (result.length > 0) {
       // remove the placeholder content
       list.removeChild(firstListItem);
       result.forEach((fuck) => { // at this point, I'm fuming!
+        let link = document.createElement('a');
+        let linkItem = document.createElement("li");
+
         link.textContent = fuck.name;
         link.href= fuck.pdfUrl;
-        list.appendChild(link)
+
+        linkItem.appendChild(link)
+        list.appendChild(linkItem)
       })
     }
   }).catch((err) => console.error(err));
