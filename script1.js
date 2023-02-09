@@ -19,7 +19,7 @@ function navigate() {
   var branch = document.getElementById("branch").value;
   var semester = document.getElementById("semester").value;
 
-  const baseUrl = `https://phukon.github.io/project-athena/${branch}-${semester}.html`;
+  const baseUrl = `./${branch}-${semester}.html`;
   window.location = baseUrl;
 
   // if (branch === "etc" && semester === "1") {
