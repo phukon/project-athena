@@ -65,6 +65,7 @@ let type = function typeMaker() {
   }
 }
 
+let typeValue = type();
 /* The pages object is a collection of key-value pairs, where each key represents a category (e.g. "etc", "mecha", "civil")
 and each value is an array of numbers (e.g. [1, 2, 3, 4, 5, 6, 7, 8]). The outer loop uses Object.entries() and destructuring
 assignment to iterate over the entries in the pages object. On each iteration of the outer loop, prefix is assigned the
@@ -88,9 +89,9 @@ function queryQuestionPaper() {
     if (result.length > 0) {
       // remove the placeholder content
       list.removeChild(firstListItem);
-      result.forEach((fuck) => { // at this point, I'm fuming!
+      result.forEach((fuck) => { // I'm fuming at this point!
 
-        if(fuck.type == type) {
+        if(fuck.type == typeValue) {
           let link = document.createElement('a');
           let linkItem = document.createElement("li");
   
