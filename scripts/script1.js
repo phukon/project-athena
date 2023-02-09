@@ -34,7 +34,7 @@ function navigate() {
 // sanity
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
-let typeValue = type();
+
 let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, type, file, description, "pdfUrl": file.asset->url}');
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
@@ -65,6 +65,7 @@ let type = function typeMaker() {
     }
   }
 }
+let typeValue = type();
 
 /* The pages object is a collection of key-value pairs, where each key represents a category (e.g. "etc", "mecha", "civil")
 and each value is an array of numbers (e.g. [1, 2, 3, 4, 5, 6, 7, 8]). The outer loop uses Object.entries() and destructuring
