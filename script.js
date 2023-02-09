@@ -99,6 +99,8 @@ fetch(URL)
         let title = document.createElement('div');
         let articleImage = document.createElement('img');
       
+        // forgive me, this is some noobie code
+
         if (descriptionBox.name == "article-1-descriptionBox") {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
