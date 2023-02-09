@@ -54,7 +54,7 @@ let type = function typeMaker() {
 
   for (const [prefix, suffixes] of Object.entries(types)) {
     for (const suffix of suffixes) {
-      const url = `https://phukon.github.io/project-athena/${prefix}-${suffix}.html`;
+      const url = `/.${prefix}-${suffix}.html`;
       if (currentUrl.includes(url)) {
         return `${prefix}-${suffix}`;
       }
