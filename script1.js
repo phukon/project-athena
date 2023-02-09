@@ -45,7 +45,10 @@ let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}
 
 // mannn this took me a long time to come up with
 let type = function typeMaker() {
-  const currentUrl = window.location.href;
+  const currentUrl = window.location.pathname;
+  const urlParts = currentUrl.split("/");
+  const lastPart = urlParts[urlParts.length - 1];
+
   const types = {
   "etc": [1, 2, 3, 4, 5, 6, 7, 8],
   "mecha": [1, 2, 3, 4, 5, 6, 7, 8],
@@ -54,9 +57,9 @@ let type = function typeMaker() {
 
   for (const [prefix, suffixes] of Object.entries(types)) {
     for (const suffix of suffixes) {
-      const url = `/.${prefix}-${suffix}.html`;
-      if (currentUrl.includes(url)) {
-        return `${prefix}-${suffix}`;
+      const expected = `${prefix}-${suffix}.html`;
+      if (lastPart === expected) {
+       return `${prefix}-${suffix}`;
       }
     }
   }
