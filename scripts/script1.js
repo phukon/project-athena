@@ -21,14 +21,10 @@ function navigate() {
 
   const baseUrl = `./${branch}-${semester}.html`;
   window.location = baseUrl;
-
-  // if (branch === "etc" && semester === "1") {
-  //   window.location.href = "#";
-  // } else if (branch === "mech" && semester === "1") {
-  //   window.location.href = "#";
-  // } else {
-  //   alert("Invalid selection. Please try again.");
-  // }
+  
+  /*The new URL is constructed by concatenating the current URL
+  of the page with the newly constructed URL. The newly constructed
+  URL will be added to the end of the current URL, separated by a forward slash (/) character. */ 
 }
 
 // sanity
@@ -107,7 +103,11 @@ function queryQuestionPaper() {
   }).catch((err) => console.error(err));
 }
 
-queryQuestionPaper();
+if (window.location.pathname !== "/html/resources.html") {
+  queryQuestionPaper();
+}
+
+
 
 // mannn this took me a long time to come up with
 /* const currentUrl = window.location.href;
