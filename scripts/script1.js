@@ -21,7 +21,7 @@ function navigate() {
 
   const baseUrl = `./${branch}-${semester}.html`;
   window.location = baseUrl;
-  
+  fesnfsjggnskn
   /*The new URL is constructed by concatenating the current URL
   of the page with the newly constructed URL. The newly constructed
   URL will be added to the end of the current URL, separated by a forward slash (/) character. */ 
