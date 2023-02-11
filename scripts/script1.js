@@ -45,7 +45,7 @@ let type = function typeMaker() {
   const lastPart = urlParts[urlParts.length - 1];
 
   const types = {
-  "etc": [1, 2, 3, 4, 5, 6, 7, 8],
+  "etc": [1, 2, 3, 4, 5, 6, 7, 8],d
   "mecha": [1, 2, 3, 4, 5, 6, 7, 8],
   "civil": [1, 2, 3, 4, 5, 6, 7, 8],
   "pei": [1, 2, 3, 4, 5, 6, 7, 8]
