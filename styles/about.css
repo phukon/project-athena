@@ -417,3 +417,14 @@
     color: var(--yt-color);
     display: inline;
   }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
