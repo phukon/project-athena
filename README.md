@@ -8,10 +8,11 @@
 - Uses Font Awesome for icons and Google Fonts for typography.
 
 ## Future Development
-- Implement a CMS for updating events and resources dynamically.
 - Add more articles to the main section.
 - Improve the design and layout of the website.
-- Add functionality for the "GET IN TOUCH" button.
+- Implement using ReactJS-Tailwind or NextJS-Tailwind.
+- O-Auth
+- Blog
 
 #### Author
 Riki Phukon
