@@ -102,7 +102,7 @@ function queryQuestionPaper() {
   }).catch((err) => console.error(err));
 }
 
-if (window.location.pathname !== "/html/resources.html") {
+if (window.location.pathname !== "/html/resources.html" && window.location.pathname !== "/html/about.html") {
   queryQuestionPaper();
 }
 
