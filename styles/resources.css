@@ -268,7 +268,7 @@
   }
 
 .form-button {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
   flex-grow: 1;
   border: none;
   outline: none;
@@ -278,10 +278,16 @@
 }
 
 .form-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  color:var(--highlight-color);
 }
-  
-  
+
+main > article > .article-description-section #contribute {
+  text-align: center;
+  display: block;
+  background-color:  rgba(255, 255, 255, 0.1);
+}
+
+
   @media(max-width: 1200px) {    
     #nav-mobile-section {
       flex-basis: calc(100% * 0.75);
