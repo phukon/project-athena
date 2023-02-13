@@ -16,17 +16,15 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 
 // forms
 var typeValue;
-function navigate() {
+if (window.location.pathname == "/html/resources.html") {
   var branch = document.getElementById("branch").value;
   var semester = document.getElementById("semester").value;
+  typeValue = `${branch}-${semester}`;
+}
 
+function navigate() {
   const baseUrl = "./etc-7.html";
   window.location = baseUrl;
-  typeValue = `${branch}-${semester}`;
-  return typeValue;
-  /*The new URL is constructed by concatenating the current URL
-  of the page with the newly constructed URL. The newly constructed
-  URL will be added to the end of the current URL, separated by a forward slash (/) character. */ 
 }
 
 // sanity
