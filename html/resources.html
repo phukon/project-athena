@@ -71,7 +71,7 @@
       <article data-index="1" data-status="inactive">    
         <div class="content" id="articleImage2">
 
-            <p> Enter details <br>
+            <p id="hiddenObject"> Enter details <br>
                 <select id="branch">
                     <option disabled selected>Branch</option>
                     <option value="etc">ETC</option>
@@ -90,12 +90,19 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                   </select><p>&nbsp;</p>
-                  <button class="form-button" type="button" onclick="navigate()">
+                  <button class="form-button" type="button" onclick="typeValue()">
                     Let's go!!! <i class="fas fa-rocket"></i>
                   </button>
             </p>
             <p>&nbsp;</p>
-        <div id="placeholder">
+            <div id="content">
+              <p>Question papers
+                <p id="heading"></p>
+                <ul id="list">
+                  <li>Loading... ..</li>
+                </ul>
+              </p>          
+            </div>
         </div>
       </article>
     </main>
