@@ -28,11 +28,11 @@ function queryQuestionPaper(dataIn) {
   .then(({ result }) => {
 
     let list = document.querySelector("ul");
-    let firstListItem = document.querySelector("ul li");
+    //let firstListItem = document.querySelector("ul li");
 
     if (result.length > 0) {
       // to remove the placeholder content
-      list.removeChild(firstListItem);
+      document.getElementById("list").innerHTML = "";
       result.forEach((fuck) => {
 
         if(fuck.type == dataIn) {
