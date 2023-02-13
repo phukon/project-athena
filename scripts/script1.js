@@ -15,12 +15,15 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 };
 
 // forms
+var typeValue;
 function navigate() {
   var branch = document.getElementById("branch").value;
   var semester = document.getElementById("semester").value;
 
-  const baseUrl = `./${branch}-${semester}.html`;
+  const baseUrl = "html\civil-1.html";
   window.location = baseUrl;
+  typeValue = `${branch}-${semester}`;
+  return typeValue;
   /*The new URL is constructed by concatenating the current URL
   of the page with the newly constructed URL. The newly constructed
   URL will be added to the end of the current URL, separated by a forward slash (/) character. */ 
@@ -39,28 +42,28 @@ let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}
 // please review if you buy domain names!!
 
 // mannn this took me a long time to come up with
-let type = function typeMaker() {
-  const currentUrl = window.location.pathname;
-  const urlParts = currentUrl.split("/");
-  const lastPart = urlParts[urlParts.length - 1];
+// let type = function typeMaker() {
+//   const currentUrl = window.location.pathname;
+//   const urlParts = currentUrl.split("/");
+//   const lastPart = urlParts[urlParts.length - 1];
 
-  const types = {
-  "etc": [1, 2, 3, 4, 5, 6, 7, 8],
-  "mecha": [1, 2, 3, 4, 5, 6, 7, 8],
-  "civil": [1, 2, 3, 4, 5, 6, 7, 8],
-  "pei": [1, 2, 3, 4, 5, 6, 7, 8]
-  };
+//   const types = {
+//   "etc": [1, 2, 3, 4, 5, 6, 7, 8],
+//   "mecha": [1, 2, 3, 4, 5, 6, 7, 8],
+//   "civil": [1, 2, 3, 4, 5, 6, 7, 8],
+//   "pei": [1, 2, 3, 4, 5, 6, 7, 8]
+//   };
 
-  for (const [prefix, suffixes] of Object.entries(types)) {
-    for (const suffix of suffixes) {
-      const expected = `${prefix}-${suffix}.html`;
-      if (lastPart === expected) {
-       return `${prefix}-${suffix}`;
-      }
-    }
-  }
-}
-let typeValue = type();
+//   for (const [prefix, suffixes] of Object.entries(types)) {
+//     for (const suffix of suffixes) {
+//       const expected = `${prefix}-${suffix}.html`;
+//       if (lastPart === expected) {
+//        return `${prefix}-${suffix}`;
+//       }
+//     }
+//   }
+// }
+// let typeValue = type();
 
 /* The pages object is a collection of key-value pairs, where each key represents a category (e.g. "etc", "mecha", "civil")
 and each value is an array of numbers (e.g. [1, 2, 3, 4, 5, 6, 7, 8]). The outer loop uses Object.entries() and destructuring
