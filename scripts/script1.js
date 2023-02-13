@@ -14,14 +14,6 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
   nav.dataset.toggled = "false";
 };
 
-// forms
-let typeValue = function () {
-  var branch = document.getElementById("branch").value;
-  var semester = document.getElementById("semester").value;
-  document.getElementById("hiddenObject").style.display = "none";
-  var type = `${branch}-${semester}`;
-  return type;
-}
 
 // sanity
 let PROJECT_ID = "jbb9mv51";
@@ -58,6 +50,18 @@ function queryQuestionPaper(dataIn) {
   }).catch((err) => console.error(err));
 }
 
-if (window.location.pathname !== "/html/about.html") {
-  queryQuestionPaper(typeValue);
+
+
+// forms
+let typeValue = function () {
+  var branch = document.getElementById("branch").value;
+  var semester = document.getElementById("semester").value;
+  //document.getElementById("hiddenObject").style.display = "none";
+  var type = `${branch}-${semester}`;
+  sessionStorage.setItem("type", type);
+  let storedType = sessionStorage.getItem("type");
+  if (window.location.pathname !== "/html/about.html") {
+    queryQuestionPaper(storedType);
+    sessionStorage.clear();
+  }
 }
