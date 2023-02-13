@@ -20,7 +20,7 @@ function navigate() {
   var branch = document.getElementById("branch").value;
   var semester = document.getElementById("semester").value;
 
-  const baseUrl = "./civil-1.html";
+  const baseUrl = "./etc-7.html";
   window.location = baseUrl;
   typeValue = `${branch}-${semester}`;
   return typeValue;
