@@ -179,9 +179,9 @@
     border-top: 1px solid var(--border-color);
   }
 
-  main > article:first-child > .article-image-section {
+  /* main > article:first-child > .article-image-section {
     background-image: url("/assets/Jorbim_Boys_Hostel_1_during_diwali.jpg");
-  }
+  } */
   
   /* main > article:nth-child(2) > .article-image-section {
     background-image: url("/assets/guest_hosue.jpg");
