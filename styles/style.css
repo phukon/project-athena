@@ -111,6 +111,12 @@
     position: relative;
     overflow: hidden;
   }
+
+  main > article > .article-description-section .page-button {
+    text-align: center;
+    display: block;
+    background-color:  rgba(255, 255, 255, 0.1);
+  }
   
   main > article {
     height: 100%;
