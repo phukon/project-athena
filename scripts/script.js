@@ -136,7 +136,7 @@ fetch(URL)
           articleImage3.appendChild(articleImage);
           description3.appendChild(text);
           title3.appendChild(title);
-        } else {
+        } else if (descriptionBox.name == 'article-4-descriptionBox') {
           text.textContent = descriptionBox?.description;
           title.textContent = descriptionBox?.titleBox;
           articleImage.src = descriptionBox?.imageUrl;
@@ -144,6 +144,8 @@ fetch(URL)
           articleImage4.appendChild(articleImage);
           description4.appendChild(text);
           title4.appendChild(title);
+        } else {
+          return;
         }
         
     });
