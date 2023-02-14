@@ -1,6 +1,6 @@
 /* -- Carousel Navigation -- */
 
-  function showPopup() {
+function showPopup() {
     // Check if the cookie has been set
     if (!document.cookie.replace(/(?:(?:^|.*;\s*)popupShown\s*\=\s*([^;]*).*$)|^.*$/, "$1")) {
       // Set the cookie
