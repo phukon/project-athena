@@ -18,9 +18,46 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 // sanity
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
-
+//q1
 let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, type, file, description, "pdfUrl": file.asset->url}');
 let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+//q2
+let QUERY2 = encodeURIComponent('*[_type == "descriptionBox"]{name, description, titleBox, "imageUrl": mainImage.asset->url}');
+let URL2 = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY2}`;
+
+function queryResourcePage() {
+  fetch(URL2)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    // get the list element, and the first item
+    let description1 = document.querySelector("#article-1-descriptionBox");
+    let articleImage1 = document.getElementById('articleImage1');
+
+
+      result.forEach((descriptionBox) => {
+        
+        let text = document.createElement('div');
+        let title = document.createElement('div');
+        let articleImage = document.createElement('img');
+
+
+        if (descriptionBox.name == "resources-descriptionBox") {
+          text.textContent = descriptionBox?.description;
+          articleImage.src = descriptionBox?.imageUrl;
+
+          articleImage1.appendChild(articleImage);
+          description1.appendChild(text);
+        }
+        
+    });
+      
+    
+ 
+  })
+  .catch((err) => console.error(err));
+}
+
+queryResourcePage();
 
 function queryQuestionPaper(dataIn) {
   fetch(URL)
