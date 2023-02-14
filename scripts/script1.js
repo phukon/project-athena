@@ -57,7 +57,9 @@ function queryResourcePage() {
   .catch((err) => console.error(err));
 }
 
-queryResourcePage();
+if (window.location.pathname == "/html/resources.html") {
+  queryResourcePage();
+}
 
 function queryQuestionPaper(dataIn) {
   fetch(URL)
