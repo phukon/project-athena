@@ -1,5 +1,5 @@
 # JIST_2.0
-## A website for listing question papers, academic resources and college events, with a dynamic navigation menu.
+## A platform for listing question papers, academic resources and college events, with a dynamic navigation menu.
 
 ### Features
 - Navigation menu with links to "ABOUT", "WORK", "GET IN TOUCH" and social media icons for twitter, youtube, and codepen.
