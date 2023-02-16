@@ -18,8 +18,6 @@
 - O-Auth
 - Blog
 
-#### Author
-Riki Phukon
 ### License
 MIT License
 
