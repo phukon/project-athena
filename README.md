@@ -9,6 +9,9 @@
 - Uses Font Awesome for icons and Google Fonts for typography.
 
 ## Future Development
+- Use NPM.
+- Bundle using Webpack, Vite, etc.
+- Hide the API key.
 - Add more articles to the main section.
 - Improve the design and layout of the website.
 - Implement using ReactJS-Tailwind or NextJS-Tailwind.
