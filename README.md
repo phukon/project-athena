@@ -12,7 +12,8 @@
 - Use NPM.
 - Bundle using Webpack, Vite, etc.
 - Hide the API key.
-- Add more articles to the main section.
+- Set up the Alumni section
+- Set up servers in the campus
 - Improve the design and layout of the website.
 - Implement using ReactJS-Tailwind or NextJS-Tailwind.
 - O-Auth
