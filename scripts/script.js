@@ -63,9 +63,6 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
   nav.dataset.toggled = "false";
 };
 
-/* From here, I used Sanity v3. Don't forget to add CORS origins dei!
-Sanity manage mari, API section goi pine, add CORS origins koribi.
-*/
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 let QUERY = encodeURIComponent('*[_type == "descriptionBox"]{name, description, titleBox, "imageUrl": mainImage.asset->url}');
@@ -95,9 +92,6 @@ fetch(URL)
     let title4 = document.querySelector('#article-title4');
     const loadingElements = document.getElementsByClassName("loading");
 
-    /* damn it took so much time on this one
-      done now. It's for removing the loading text. You can do it Riki!!
-    */
     if (result.length > 0) {
       for (let i = 0; i < loadingElements.length; i++) {
         loadingElements[i].style.display = "none";
