@@ -1,7 +1,7 @@
-import { showPopup } from "/src/components/popup.js"
-import { fetchArticles } from "/src/components/fetchArticles.js";
-import { queryQuestionPaper } from "/src/components/fetchQuestionPaper.js";
-import { queryResourcePage } from "/src/components/resourcePage.js";
+import { showPopup } from "./components/popup.js"
+import { fetchArticles } from "./components/fetchArticles.js";
+import { queryQuestionPaper } from "./components/fetchQuestionPaper.js";
+import { queryResourcePage } from "./components/resourcePage.js";
 
 // ------------> Interaction <----------------
 
