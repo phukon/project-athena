@@ -75,7 +75,7 @@ if (window.location.pathname == "/html/resources.html") {
 }
 
 // Only one query among these two must run at a time.
-if (window.location.pathname == "/") {
+if (window.location.pathname == "/index.html") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
   } else {
