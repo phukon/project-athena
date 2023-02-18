@@ -1,4 +1,4 @@
-# JIST_2.0 v0.1.1-apha
+# Project Athena
 
 ## A platform for listing question papers, academic resources and college events, with a dynamic navigation menu.
 
