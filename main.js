@@ -1,7 +1,7 @@
-import { showPopup } from "/popup.js"
-import { fetchArticles } from "/fetchArticles.js";
-import { queryQuestionPaper } from "/fetchQuestionPaper.js";
-import { queryResourcePage } from "/resourcePage.js";
+import { showPopup } from "/src/components/popup.js"
+import { fetchArticles } from "/src/components/fetchArticles.js";
+import { queryQuestionPaper } from "/src/components/fetchQuestionPaper.js";
+import { queryResourcePage } from "/src/components/resourcePage.js";
 
 // ------------> Interaction <---------------
 
@@ -70,7 +70,7 @@ let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
 // This is for the resources content.
-if (window.location.pathname == "/html/resources.html") {
+if (window.location.pathname == "/public/html/resources.html") {
   queryResourcePage(PROJECT_ID, DATASET);
 }
 
@@ -79,7 +79,7 @@ if (window.location.pathname == "/index.html") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
   } else {
-    if (window.location.pathname !== "/html/about.html") {
+    if (window.location.pathname !== "/public/html/about.html") {
       const typeButton = document.getElementById('typeValue');
       typeButton.addEventListener('click', () => {
       var branch = document.getElementById("branch").value;
@@ -88,7 +88,7 @@ if (window.location.pathname == "/index.html") {
   
       sessionStorage.setItem("type", type);
       let storedType = sessionStorage.getItem("type");
-      if (window.location.pathname !== "/html/about.html") {
+      if (window.location.pathname !== "/public/html/about.html") {
         queryQuestionPaper(PROJECT_ID, DATASET, storedType);
         sessionStorage.clear();
       }
