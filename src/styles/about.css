@@ -165,7 +165,7 @@
   }
 
   main > article:first-child > .article-image-section {
-    background-image: url("/src/assets/Jorbim_Boys_Hostel_1_during_diwali.jpg");
+    background-image: url("../assets/Jorbim_Boys_Hostel_1_during_diwali.jpg");
   }
   
   main > article > .article-image-section {
