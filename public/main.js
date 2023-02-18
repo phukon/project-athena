@@ -70,12 +70,12 @@ let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
 // This is for the resources content.
-if (window.location.pathname == "./html/resources.html") {
+if (window.location.pathname == "/public/html/resources.html") {
   queryResourcePage(PROJECT_ID, DATASET);
 }
 
 // Only one query among these two must run at a time.
-if (window.location.pathname == "./index.html") {
+if (window.location.pathname == "/public/index.html") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
   } else {
@@ -88,7 +88,7 @@ if (window.location.pathname == "./index.html") {
   
       sessionStorage.setItem("type", type);
       let storedType = sessionStorage.getItem("type");
-      if (window.location.pathname !== "./html/about.html") {
+      if (window.location.pathname !== "/public/html/about.html") {
         queryQuestionPaper(PROJECT_ID, DATASET, storedType);
         sessionStorage.clear();
       }
