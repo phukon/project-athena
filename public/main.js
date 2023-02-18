@@ -75,11 +75,11 @@ if (window.location.pathname == "/public/html/resources.html") {
 }
 
 // Only one query among these two must run at a time.
-if (window.location.pathname == "/public/index.html") {
+if (window.location.pathname == "/") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
   } else {
-    if (window.location.pathname !== "/public/html/about.html") {
+    if (window.location.pathname !== "/html/about.html") {
       const typeButton = document.getElementById('typeValue');
       typeButton.addEventListener('click', () => {
       var branch = document.getElementById("branch").value;
@@ -88,7 +88,7 @@ if (window.location.pathname == "/public/index.html") {
   
       sessionStorage.setItem("type", type);
       let storedType = sessionStorage.getItem("type");
-      if (window.location.pathname !== "/public/html/about.html") {
+      if (window.location.pathname !== "/html/about.html") {
         queryQuestionPaper(PROJECT_ID, DATASET, storedType);
         sessionStorage.clear();
       }
