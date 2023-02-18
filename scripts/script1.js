@@ -61,51 +61,51 @@ if (window.location.pathname == "/html/resources.html") {
   queryResourcePage();
 }
 
-function queryQuestionPaper(dataIn) {
-  fetch(URL)
-  .then((res) => res.json())
-  .then(({ result }) => {
+// function queryQuestionPaper(dataIn) {
+//   fetch(URL)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
 
-    let list = document.querySelector("ul");
-    let heading = document.getElementById("heading");
-    //let firstListItem = document.querySelector("ul li");
+//     let list = document.querySelector("ul");
+//     let heading = document.getElementById("heading");
+//     //let firstListItem = document.querySelector("ul li");
 
-    if (result.length > 0) {
-      // to remove the placeholder content
-      document.getElementById("list").innerHTML = "";
-      //document.getElementById("heading").innerHTML = "";
-      result.forEach((fuck) => {
+//     if (result.length > 0) {
+//       // to remove the placeholder content
+//       document.getElementById("list").innerHTML = "";
+//       //document.getElementById("heading").innerHTML = "";
+//       result.forEach((fuck) => {
 
-        if(fuck.type == dataIn) {
-          let link = document.createElement('a');
-          let linkItem = document.createElement("li");
-          let name = document.createElement("h3");
+//         if(fuck.type == dataIn) {
+//           let link = document.createElement('a');
+//           let linkItem = document.createElement("li");
+//           let name = document.createElement("h3");
           
-          name.textContent = fuck.type;
-          link.textContent = fuck.name;
-          link.href= fuck.pdfUrl;
+//           name.textContent = fuck.type;
+//           link.textContent = fuck.name;
+//           link.href= fuck.pdfUrl;
           
-          //heading.appendChild(name);
-          linkItem.appendChild(link)
-          list.appendChild(linkItem)
-        }
-      })
-    }
-  }).catch((err) => console.error(err));
-}
+//           //heading.appendChild(name);
+//           linkItem.appendChild(link)
+//           list.appendChild(linkItem)
+//         }
+//       })
+//     }
+//   }).catch((err) => console.error(err));
+// }
 
 
 
 // forms
-let typeValue = function () {
-  var branch = document.getElementById("branch").value;
-  var semester = document.getElementById("semester").value;
-  //document.getElementById("hiddenObject").style.display = "none";
-  var type = `${branch}-${semester}`;
-  sessionStorage.setItem("type", type);
-  let storedType = sessionStorage.getItem("type");
-  if (window.location.pathname !== "/html/about.html") {
-    queryQuestionPaper(storedType);
-    sessionStorage.clear();
-  }
-}
+// export let typeValue = function () {
+//   var branch = document.getElementById("branch").value;
+//   var semester = document.getElementById("semester").value;
+//   //document.getElementById("hiddenObject").style.display = "none";
+//   var type = `${branch}-${semester}`;
+//   sessionStorage.setItem("type", type);
+//   let storedType = sessionStorage.getItem("type");
+//   if (window.location.pathname !== "/html/about.html") {
+//     queryQuestionPaper(storedType);
+//     sessionStorage.clear();
+//   }
+// }
