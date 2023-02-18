@@ -69,8 +69,8 @@ for (let i = 0; i < handleRightClicks.length; i++) {
 let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
-// This is for the resources content.
-if (window.location.pathname == "/src/html/resources.html" || window.location.pathname == "/html/resources.html" || window.location.pathname == "/" ) {
+// This is for the resources content. So many conditions have been set because we want to run the app in the local and the deployed verion as well
+if (window.location.pathname == "/src/html/resources.html" || window.location.pathname == "/html/resources.html") {
   queryResourcePage(PROJECT_ID, DATASET);
 }
 
@@ -78,7 +78,9 @@ if (window.location.pathname == "/src/html/resources.html" || window.location.pa
 if (window.location.pathname == "/src/index.html" || window.location.pathname == "/index.html") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
-  } else {
+  } else if (window.location.pathname == "/" ){
+    window.location.href = "/index.html";
+  }  else {
     if (window.location.pathname !== "/src/html/about.html" && window.location.pathname !== "/html/about.html") {
       const typeButton = document.getElementById('typeValue');
       typeButton.addEventListener('click', () => {
