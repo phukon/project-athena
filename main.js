@@ -3,7 +3,7 @@ import { fetchArticles } from "/src/components/fetchArticles.js";
 import { queryQuestionPaper } from "/src/components/fetchQuestionPaper.js";
 import { queryResourcePage } from "/src/components/resourcePage.js";
 
-// ------------> Interaction <---------------
+// ------------> Interaction <----------------
 
 /* -- Mobile Nav Toggle -- */
 const nav = document.querySelector("nav");
