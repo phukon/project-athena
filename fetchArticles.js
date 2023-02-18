@@ -1,4 +1,4 @@
-export function fetchArticles(p_id,dSet) {
+export function fetchArticles(p_id, dSet) {
 
   let PROJECT_ID = p_id
   let DATASET = dSet
