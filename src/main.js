@@ -70,16 +70,16 @@ let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
 // This is for the resources content.
-if (window.location.pathname == "/src/html/resources.html") {
+if (window.location.pathname == "/src/html/resources.html" || window.location.pathname == "/html/resources.html" ) {
   queryResourcePage(PROJECT_ID, DATASET);
 }
 
 // Only one query among these two must run at a time.
-if (window.location.pathname == "/src/" || window.location.pathname == "/src/index.html" || window.location.pathname == "/") {
+if (window.location.pathname == "/src/index.html" || window.location.pathname == "/index.html") {
     fetchArticles(PROJECT_ID, DATASET);
     showPopup();
   } else {
-    if (window.location.pathname !== "/src/html/about.html") {
+    if (window.location.pathname !== "/src/html/about.html" && window.location.pathname !== "/html/about.html") {
       const typeButton = document.getElementById('typeValue');
       typeButton.addEventListener('click', () => {
       var branch = document.getElementById("branch").value;
@@ -88,7 +88,7 @@ if (window.location.pathname == "/src/" || window.location.pathname == "/src/ind
   
       sessionStorage.setItem("type", type);
       let storedType = sessionStorage.getItem("type");
-      if (window.location.pathname !== "/src/html/about.html") {
+      if (window.location.pathname !== "/src/html/about.html" && window.location.pathname !== "/html/about.html") {
         queryQuestionPaper(PROJECT_ID, DATASET, storedType);
         sessionStorage.clear();
       }
