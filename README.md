@@ -1,16 +1,11 @@
 # Project Athena
 
-## A platform for listing question papers, academic resources and college events, with a dynamic navigation menu.
+## A platform for listing question papers, academic resources and college events.
 
-### Features
-- Navigation menu with links to "ABOUT", "WORK", "GET IN TOUCH" and social media icons for twitter, youtube, and codepen.
-- Main section with articles for listing resources and events.
-- Each article has a title, description, and navigation buttons for switching between articles.
-- Uses Font Awesome for icons and Google Fonts for typography.
+- Headless cms
 
 ## Future Development
-- Use NPM.
-- Bundle using Webpack, Vite, etc.
+- Use of environment variables
 - Hide the API key.
 - Set up the Alumni section
 - Set up servers in the campus
