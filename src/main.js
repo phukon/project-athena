@@ -70,7 +70,7 @@ let PROJECT_ID = "jbb9mv51";
 let DATASET = "production";
 
 // This is for the resources content.
-if (window.location.pathname == "/src/html/resources.html" || window.location.pathname == "/html/resources.html" ) {
+if (window.location.pathname == "/src/html/resources.html" || window.location.pathname == "/html/resources.html" || window.location.pathname == "/" ) {
   queryResourcePage(PROJECT_ID, DATASET);
 }
 
