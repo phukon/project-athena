@@ -2,7 +2,7 @@ export function queryQuestionPaper(p_id, dSet, dataIn) {
 
     let PROJECT_ID = p_id
     let DATASET = dSet    
-    let QUERY = encodeURIComponent('*[_type == "pdfs"]{name, type, file, description, "pdfUrl": file.asset->url}');
+    let QUERY = encodeURIComponent('*[_type == "question_papers"]{name, type, file, description, "pdfUrl": file.asset->url}');
     let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
     
     fetch(URL)

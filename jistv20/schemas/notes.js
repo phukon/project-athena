@@ -1,6 +1,6 @@
 export default {
-    title: 'question papers',
-    name: 'question_papers',
+    title: 'notes',
+    name: 'notes',
     type: 'document',
     fields: [
     {
