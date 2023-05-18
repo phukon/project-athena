@@ -14,6 +14,11 @@ export default {
         type: 'string'
     },
     {
+        name: 'college',
+        title: 'College',
+        type: 'string'
+    },
+    {
         title: 'File',
         name: 'file',
         type: 'file',
